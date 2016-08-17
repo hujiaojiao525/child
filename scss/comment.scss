@@ -1,0 +1,122 @@
+@charset "UTF-8";
+*,*:before,*:after{
+	box-sizing:border-box;
+	-webkit-box-sizing: border-box;
+	-webkit-tap-highlight-color:transparent;
+	-webkit-touch-callout:none;
+}
+html,body{
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+	height: 100%;
+	width: 100%;
+	font-family:"微软雅黑";
+}
+body{
+	position: relative;
+	overflow: hidden;
+	background:#f7f7f7;
+}
+html,body,li,ul,ol,img{
+	margin:0;
+	padding:0;
+}
+li{
+	list-style-type: none;
+}
+a{
+	text-decoration:none;
+}
+
+.clearfix{ //清除浮动
+	&:before,
+	&:after{
+		dispaly:block;
+		content: 0;
+		height: 0;
+	}
+	&:after{
+		clear:both;
+	}
+}
+
+@mixin full{
+	width:100%;
+	height:100%;
+}
+@mixin pos($p:absolute){
+	position:$p;
+}
+@mixin _flex{//弹性盒子
+	display:-webkit-flex;
+	display:flex;
+}
+@mixin vertical{//垂直分布
+	-webkit-flex-direction:column;
+	flex-direction:column;
+}
+@mixin group($num){//分配的份数
+	-webkit-flex:$num;
+	flex:$num;
+}
+@mixin transform($r){//动画属性
+	-webkit-transform:$r;
+}
+@mixin color(){//颜色
+	color:#666;
+}
+@mixin bottomArrow($c){//三角 向下
+	&::after{
+		content:"";
+		display:inline-block;
+		width:8px;
+		height:8px;
+		border-top:1px solid $c;
+		border-right:1px solid $c;
+		@include transform(rotate(135deg));
+		-webkit-transition:.1s;
+		margin:0 4px 2px;
+	}
+}
+@mixin leftArrow($c){//三角 向左
+	&::after{
+		content:"";
+		display:inline-block;
+		width:10px;
+		height:10px;
+		border-top:2px solid $c;
+		border-right:2px solid $c;
+		@include transform(rotate(225deg));
+		-webkit-transition:.1s;
+		
+	}
+}
+@mixin topArrow($c){//三角 向上
+	&::after{
+		content:"";
+		display:inline-block;
+		width:8px;
+		height:8px;
+		border-top:1px solid $c;
+		border-right:1px solid $c;
+		@include transform(rotate(-45deg));
+		-webkit-transition:.1s;
+		margin:0 4px 2px;
+	}
+}
+@mixin center($para){//分布
+	@if ($para==space-between) {
+		justify-content:$para;
+		align-items:stretch;
+	} @else if ($para==space-around){
+		justify-content:$para;
+		align-items:stretch;
+	} @else {
+		justify-content:$para;
+		align-items:$para;
+	}
+	justify-content:$para;
+	align-items:stretch;
+}

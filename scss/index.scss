@@ -1,0 +1,166 @@
+@charset "UTF-8";
+.index-container{
+	width:100%;
+	height:100%;
+	@include pos(relative);
+}
+
+$baseColor:#ff989e;
+
+/* -- index-header-- */
+.index-header{
+	width:100%;
+	height:44px;
+	line-height:44px;
+	background:$baseColor;
+	@include pos;
+	left:0;
+	top:0;
+	z-index:99;
+	h1{
+		text-align:center;
+		color:#fff;
+		font-size:17px;
+	}
+	a{
+		@include pos;
+		color:transparent;
+		width:22px;
+		height:22px;
+		background:url('../img/serch.png') no-repeat;
+		background-size:contain;
+		right:10px;
+		top:50%;
+		margin-top:-11px;
+	}
+}
+
+/* -- index-banner -- */
+.index-main{
+	width:100%;
+	@include pos;
+	//overflow:scroll;
+	top:44px;
+	bottom:49px;
+	overflow:hidden;
+	.iscroll{
+		width:100%;
+		@include pos;
+	}
+	.swiper-container{
+		height:146px;
+		margin-bottom:5px;
+		img{
+			width:100%;
+			height:100%;
+		}
+	}
+	.swiper-pagination-bullet-active{
+		background:$baseColor;
+	}
+
+	.index-nav{
+		width:100%;
+		height:98px;
+		background:#fff;
+		ul{
+			li{
+				width:25%;
+				float:left;
+				text-align:center;
+				padding:10px 0;
+				img{
+					width:62px;
+					height:62px;
+				}
+				a{
+					display:block;
+					height:100%;
+				}
+				span{
+					display:block;
+					color:#8b8666;
+					font-size:13px;
+				}
+			}
+		}
+	}
+	.index-all-item{
+		padding-left:10px;
+		h2{
+			height:40px;
+			line-height:40px;
+			padding-left:15px;
+			color:#666;
+			font-size:14px;
+		}
+		.index-item{
+			width:46%;
+			float:left;
+			margin-right:10px;
+			margin-bottom:10px;
+			background:#fff;
+			&:nth-of-type(2n){
+				margin-right:none;
+			}
+			img{
+				width:138px;
+				height:138px;
+
+			}
+			h3{
+				font-size:12px;
+				color:#3b3b3b;
+				line-height:22px;
+				padding-left:5px;
+			}
+			p{
+				padding:0 5px;
+				line-height:18px;
+				b{
+					font-weight:100;
+					color:#666;
+					em{
+						color:$baseColor;
+						font-size:12px;
+						padding-left:5px;
+					}
+				}
+				span{
+					float:right;
+				}
+			}
+
+		}
+	}
+
+}
+
+.index-footer{
+	width:100%;
+	height:49px;
+	@include pos;
+	bottom:0;
+	left:0;
+	z-index:99;
+	div{
+		width:25%;
+		float:left;
+		text-align:center;
+		span{
+			font-size:19px;
+			line-height: 1.5;
+		}
+		p{
+			color:#666;
+		}
+		&.index-active{
+			color:$baseColor;
+			p{
+				color:$baseColor;
+			}
+		}
+	}
+	
+}
+

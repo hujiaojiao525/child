@@ -1,0 +1,56 @@
+.recipes-header{
+    width: 200px;
+    height: 33px;
+    border:1px solid #fb838c;
+    margin:5px auto;
+    border-radius:10px;
+    overflow:hidden;
+    span{
+        width: 50%;
+        height: 100%;
+        line-height:33px;
+        float:left;
+        text-align:center;
+        font-size:14px;
+        color:#fff;
+    }
+    .mm{
+        background:#f9848c;
+    }
+}
+
+.recipes-banner{
+    height:154px;
+    width: 100%;
+    background:url(../img/mombj.png) no-repeat;
+    background-size:cover;
+    @include pos(relative);
+    margin-bottom:12px;
+    .yuan{
+         width: 62px;
+        height: 62px;
+        background:url(../img/yuan.png) no-repeat;
+        background-size:cover;
+        @include pos;
+        top:50%;
+        left:50%;
+        margin-left:-31px;
+        margin-top:-21px;
+    }
+    .recipes-banner-txt{
+        text-align:center;
+        color:#fff;
+        padding-top:5px;
+    }
+}
+
+.wran{
+    padding:15px;
+    background:url(../img/list.png) no-repeat 10px 15px;
+    background-size:15px 15px;
+    p{
+        line-height:16px;
+        color:#666;
+        padding-left:15px;
+    }
+}
