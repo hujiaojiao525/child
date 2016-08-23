@@ -5,7 +5,7 @@ define([],function(){
                 var id = $(this).attr('data-id');
                 console.log(id);
                 if(id == "index-home"){
-                    location.href = "html/index-home.html";
+                    location.href = "../index.html";
                 }else if(id == "index-Recipes"){
                     location.href = "html/Recipes.html";
                 }else if(id == "index-community"){

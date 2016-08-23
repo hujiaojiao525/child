@@ -8,6 +8,6 @@ require.config({
     }
 })
 
-require(['fastclick','jquery','iscroll','template','fastclick','../js/index'],function(fc,$){
+require(['fastclick','jquery','iscroll','template','fastclick','../js/index','../js/Recipes'],function(fc,$){
     fc.attach(document.body);        
 })

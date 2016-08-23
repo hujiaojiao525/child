@@ -5,12 +5,14 @@ define(['swiper','common'],function(s,common){
 		direction:'horizontal',
 		loop:true,// 无缝
 		pagination:'.swiper-pagination',// 分页
-		autoplay:5000,
+		autoplay:2000,
 		autoplayDisableOnInteraction:false // 手指离开自动播
 	})
 	// 调用iscroll
 	var myScroll=new IScroll('.index-main');
-
+	console.log("33333333333");
+	     
 	common._href();
+
 	     
 })
