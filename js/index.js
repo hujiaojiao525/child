@@ -10,8 +10,13 @@ define(['swiper','common'],function(s,common){
 	})
 	// 调用iscroll
 	var myScroll=new IScroll('.index-main');
+<<<<<<< HEAD
 	console.log("33333333333");
 	     
+=======
+	console.log(1);
+	
+>>>>>>> 271dc8437db8f8d4f3624a3108c12700ffc0eef5
 	common._href();
 
 	     
