@@ -10,7 +10,8 @@ define(['swiper','common'],function(s,common){
 	})
 	// 调用iscroll
 	var myScroll=new IScroll('.index-main');
-
+	console.log(1);
+	
 	common._href();
 	     
 })
